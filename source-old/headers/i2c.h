@@ -1,0 +1,53 @@
+#ifndef I2C_H_INCLUDE
+#define I2C_H_INCLUDE
+
+//I2C0 register address
+#define I2C0_BASE_START 0x44E0B000
+#define I2C0_BASE_END 0x44E0BFFF
+#define I2C0_SIZE I2C0_BASE_END - I2C0_BASE_START
+
+//I2C1 register address
+#define I2C1_BASE_START 0x4802A000
+#define I2C1_BASE_END 0x4802AFFF
+#define I2C1_SIZE I2C1_BASE_END - I2C1_BASE_START
+
+//I2C2 register address
+#define I2C2_BASE_START 0x4819C000
+#define I2C2_BASE_END 0x4819CFFF
+#define I2C2_SIZE I2C2_BASE_END - I2C2_BASE_START
+
+//I2C offset address
+#define I2C_REVNB_LO 0x000
+#define I2C_REVNB_HI 0x004
+#define I2C_SYSC 0x010
+#define I2C_IRQSTATUS_RAW 0x024
+#define I2C_IRQSTATUS 0x028
+#define I2C_IRQENABLE_SET 0x02C
+#define I2C_IRQENABLE_CLR 0x030
+#define I2C_WE 0x034
+#define I2C_DMARXENABLE_SET 0x038
+#define I2C_DMATXENABLE_SET 0x03C
+#define I2C_DMARXENABLE_CLR 0x040
+#define I2C_DMATXENABLE_CLR 0x044
+#define I2C_DMARXWAKE 0x048
+#define I2C_DMATXWAKE 0x04C
+#define I2C_SYSS 0x090
+#define I2C_BUF 0x094
+#define I2C_CNT 0x098
+#define I2C_DATA 0x09C
+#define I2C_CON 0x0A4
+#define I2C_OA 0x0A8
+#define I2C_SA 0x0AC
+#define I2C_PSC 0x0B0
+#define I2C_SCLL 0x0B4
+#define I2C_SCLH 0x0B8
+#define I2C_SYSTEST 0x0BC
+#define I2C_BUFSTAT 0x0C0
+#define I2C_OA1 0x0C4
+#define I2C_OA2 0x0C8
+#define I2C_OA3 0x0CC
+#define I2C_ACTOA 0x0D0
+#define I2C_SBLOCK 0x0D4
+
+
+#endif
