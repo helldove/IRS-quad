@@ -8,6 +8,7 @@ void pwmInit(void){
 	for(i=0;i<2;i++){
 		sprintf(temp,"%s%s%d",MOTORDIR,FREQ,i);
 		freq = open(temp,O_WRONLY|O_TRUNC);
+		printf("%s : %d\n",temp,freq);
 		sprintf(temp,"%d",PWMFREQ);
 		write(freq,temp,3);
 		close(freq);
@@ -15,12 +16,14 @@ void pwmInit(void){
 	for(i=0;i<2;i++){
 		sprintf(temp,"%s%s%d",MOTORDIR,DUTY,i);
 		duty[i] = open(temp,O_WRONLY|O_TRUNC);
+		printf("%s : %d\n",temp,duty[i]);
 		sprintf(temp,"%d",PWMMIN);
 		write(duty[i],temp,3);
 	}
 	for(i=0;i<2;i++){
 		sprintf(temp,"%s%s%d",MOTORDIR,FREQ,i);
-		en = open(temp,O_WRONLY|O_TRUNC);	
+		en = open(temp,O_WRONLY|O_TRUNC);
+		printf("%s : %d\n",temp,en);	
 		write(en,"1",1);
 		close(en);
 	}
@@ -56,7 +59,9 @@ void pwmDeinit(void){
 	for(i=0;i<2;i++){
 		sprintf(temp,"%s%s%d",MOTORDIR,FREQ,i);
 		en = open(temp,O_WRONLY|O_TRUNC);	
+		printf("%s : %d\n",temp,en);	
 		write(en,"0",1);
 		close(en);
+		close(duty[i]);
 	}
 }
