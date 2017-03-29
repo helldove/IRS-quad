@@ -15,6 +15,7 @@ void pwmInit(void){
 	for(i=0;i<2;i++){
 		sprintf(temp,"%s%s%d",MOTORDIR,DUTY,i);
 		duty[i] = open(temp,O_WRONLY||O_TRUNC);
+		printf("%s : %d , ",temp,duty[i]);
 		sprintf(temp,"%d",PWMMIN);
 		printf("duty%d : %s\n",i,temp);
 		write(duty[i],temp,4);
