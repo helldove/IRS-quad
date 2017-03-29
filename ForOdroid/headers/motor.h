@@ -3,8 +3,7 @@
 
 #include "base.h"
 #include <stdlib.h>
-#include <linux/delay.h>
-#include <linux/time.h>
+#include <unistd.h>
 
 #define MOTORDIR	"/sys/devices/platform/pwm-ctrl"
 #define DUTY		"/duty"

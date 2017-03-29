@@ -12,8 +12,8 @@ int main(void){
 	pwmInit();
 	printf("initializing finish\n");
 	pwmSpeed(2,700);
-	printf("period : %d %\n",70000/1023);
-	ssleap(5);
+	printf("period : %d %%\n",70000/1023);
+	sleep(5);
 	pwmDeinit();
 	printf("pwm end\n");
 

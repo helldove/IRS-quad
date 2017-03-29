@@ -1,4 +1,4 @@
-#include "motor.h"
+#include "headers/motor.h"
 
 int duty[2]={0};
 
@@ -10,7 +10,7 @@ void pwmInit(void){
 		freq = open(temp,O_WRONLY||O_TRUNC);
 		sprintf(temp,"%d",PWMFREQ)
 		write(freq,temp,3);
-		close(freq)
+		close(freq);
 	}
 	for(i=0;i<2;i++){
 		sprintf(temp,"%s%s%d",MOTORDIR,DUTY,i);
@@ -24,7 +24,7 @@ void pwmInit(void){
 		write(en,"1",1);
 		close(en);
 	}
-	ssleap(8);
+	sleep(8);
 }
 
 
