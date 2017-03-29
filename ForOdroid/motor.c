@@ -36,7 +36,7 @@ void pwmSpeed(int flag, int speed){
 		speed = PWMMIN;
 
 	sprintf(temp,"%d",speed);
-	printf("input speed : %d\n",temp);
+	printf("input speed : %s\n",temp);
 	switch(flag){
 		case 0:
 			write(duty[0],temp,4);
