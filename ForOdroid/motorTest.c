@@ -9,7 +9,7 @@ int main(void){
 	printf("pwm start\n");
 	pwmInit();
 	printf("initializing finish\n");
-	pwmSpeed(2,900);
+	pwmSpeed(2,800);
 	printf("period : %d %%\n",90000/1023);
 	sleep(5);
 	pwmDeinit();
