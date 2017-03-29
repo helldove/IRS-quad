@@ -6,7 +6,7 @@
 
 
 int main(void){
-	int SelectPwm = 0, int PwmSpeed = 0;
+	int SelectPwm = 0,PwmSpeed = 0;
 
 	printf("pwm start\n");
 	pwmInit();
