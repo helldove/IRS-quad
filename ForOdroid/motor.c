@@ -57,7 +57,7 @@ void pwmDeinit(void){
 	char temp[50];
 	int en = 0,i=0;
 	for(i=0;i<2;i++){
-		sprintf(temp,"%s%s%d",MOTORDIR,FREQ,i);
+		sprintf(temp,"%s%s%d",MOTORDIR,ENPWM,i);
 		en = open(temp,O_WRONLY|O_TRUNC);	
 		printf("%s : %d\n",temp,en);	
 		write(en,"0",1);
