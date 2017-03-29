@@ -11,7 +11,7 @@
  *	this source for sensor communication on i2c protocol
  ***********************************************************/
 
-#include "sensor.h"
+#include "headers/sensor.h"
 
 //switching slave address to gyro accellerometer
 #define SWGA(a)		{if(ioctl(a,I2C_SLAVE,GAADDR)<0){ \
