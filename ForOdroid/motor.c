@@ -8,7 +8,7 @@ void pwmInit(void){
 	for(i=0;i<2;i++){
 		sprintf(temp,"%s%s%d",MOTORDIR,FREQ,i);
 		freq = open(temp,O_WRONLY|O_TRUNC);
-		sprintf(temp,"%d",PWMFREQ)
+		sprintf(temp,"%d",PWMFREQ);
 		write(freq,temp,3);
 		close(freq);
 	}
